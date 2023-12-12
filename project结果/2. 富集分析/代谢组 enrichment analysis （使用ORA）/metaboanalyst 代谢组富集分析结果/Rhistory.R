@@ -1,0 +1,33 @@
+# PID of current job: 2001773
+mSet<-InitDataObjects("conc", "msetora", FALSE)
+cmpd.vec<-c("Arginine","Lysine","Pipecolate","Tryptamine","Adenylosuccinate","Proline","1-Methylhistidine","iso-Leucine","Valine","gamma-Aminobutyrate","Pantothenate","2-Hydroxyglutarate","Cysteinyl-Glycine","Leucine","Cadaverine","Dimethylglycine","5-Aminovaleric Acid","Alpha-Ketoglutaric Acid","Reduced glutathione","Alanine","Creatine","Pyroglutamic Acid","Asparagine","Inosine","Glutamine","Glutamic acid","N-AcetylGlycine","Cystamine","1-Methylhistamine","DTMP","IMP","4-Pyridoxic acid","Margaric Acid","Xanthurenate","4-Hydroxybutyrate","Glyceraldehyde","Succinate","Hypoxanthine","Xanthine","Oxypurinol","CMP","Orotate")
+mSet<-Setup.MapData(mSet, cmpd.vec);
+mSet<-CrossReferencing(mSet, "name");
+mSet<-CreateMappingResultTable(mSet)
+mSet<-SetMetabolomeFilter(mSet, F);
+mSet<-SetCurrentMsetLib(mSet, "kegg_pathway", 2);
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_0_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_0_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_1_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_1_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_2_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_2_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_3_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_3_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_4_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_4_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_5_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_5_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_6_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_6_", "png", 72, width=NA)
+mSet<-CalculateHyperScore(mSet)
+mSet<-PlotORA(mSet, "ora_7_", "net", "png", 72, width=NA)
+mSet<-PlotEnrichDotPlot(mSet, "ora", "ora_dot_7_", "png", 72, width=NA)
+mSet<-SaveTransformedData(mSet)

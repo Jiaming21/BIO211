@@ -1,0 +1,13 @@
+目标：
+1. 从高通量数据中选出显著基因
+2. 聚类有相似表达的基因
+3. 根据基因本体（ontology）类别与生物pathway去整理基因
+
+癌症基因组图谱:the Cancer Genome Atlas (TCGA)
+
+LIHC_counts_lab4.csv:行代表一个基因，列代表374(肿瘤)+50(正常)个sample
+
+1. 从高通量数据中选出显著基因 
+是与control比，不同量化的程度差两倍以上，无法用p
+我们用limma和edgeR,使用负二项分布以及相应的统计检验
+
